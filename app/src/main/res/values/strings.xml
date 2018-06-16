@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TabLayoutApp1</string>
+    <string name="tab_text_1">Ingredients</string>
+    <string name="tab_text_2">Instructions</string>
+    <string name="account_settings">Email and Password Settings</string>
+    <string name="preference_settings">Preference Settings</string>
+    <string name="logout">Logout</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>
