@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -80,7 +81,13 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.account_settings) {
+
+            //do something here
             return true;
+        } else if (id == R.id.preference_settings){
+
+        } else if (id == R.id.logout_setting){
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -118,16 +125,18 @@ public class MainActivity extends AppCompatActivity {
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             ListView listView = (ListView) rootView.findViewById(R.id._dynamic);
 
-            int tabCount = getArguments().getInt(ARG_SECTION_NUMBER);
+            int tabCount = 0;
+            tabCount = getArguments().getInt(ARG_SECTION_NUMBER);
 
             textView.setText(getString(R.string.section_format, tabCount));
 
             String[] ingredients = {"aa", "bb", "cc", "dd"};
             String[] instructions = {"inst1", "inst2","inst3","inst4"};
-            // populateListView();
+
             //Build Adapter
             String[] listContent;
 
+           // Log.i("TC","tabCount: " + String.valueOf(tabCount));
 
             if (tabCount == 1) {
                 listContent = ingredients;
